@@ -21,9 +21,9 @@ func convert(strUnconverted: String) throws -> Int {
 
 // This function finds the max run for each line.
 func fibSequence(number: Int) -> Int {
-  if number == 1 {
+  if number == 0 {
     return 0
-  } else if number == 2 {
+  } else if number == 1 {
     return 1
   } else {
     return fibSequence(number: number - 1) + fibSequence(number: number - 2)
@@ -44,7 +44,7 @@ for position in lineArray {
   let term = try convert(strUnconverted: position)
 
   // Check if number is negative.
-  if term <= 0 {
+  if term < 0 {
     print("Number must be positive.")
   } else {
     let numInSequence = fibSequence(number: term)
