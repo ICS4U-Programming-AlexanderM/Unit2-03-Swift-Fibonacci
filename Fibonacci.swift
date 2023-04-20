@@ -19,7 +19,7 @@ func convert(strUnconverted: String) throws -> Int {
   return numConverted
 }
 
-// This function finds the max run for each line.
+// This function calculates the FIbonacci sequence.
 func fibSequence(number: Int) -> Int {
   if number == 0 {
     return 0
@@ -38,7 +38,7 @@ let lineArray = inputData.components(separatedBy: .newlines)
 // Open the output file for writing.
 let outputFile = URL(fileURLWithPath: "output.txt")
 
-// Call function to find run and print to output file.
+// Call function and print to output file.
 var fibString = ""
 for position in lineArray {
   let term = try convert(strUnconverted: position)
